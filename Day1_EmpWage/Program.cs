@@ -11,11 +11,12 @@ namespace Day1_EmpWage
     {
         static void Main(string[] args)
         {
-            EmployeeCheck emp = new EmployeeCheck();
+            EmpWageComputation emp = new EmpWageComputation();
             string ans = "";
             do
             {
-                Console.WriteLine(" 1:Check Emp Avalability \n 2: Check Daily Wage \n 3: PartTime_FullTime_Emp \n 4: PartTime FullTime Emp Using SwitchCase \n 5: Calculate_Wage_ForMonth");
+                Console.WriteLine(" 1:Check Emp Avalability \n 2: Check Daily Wage \n 3: PartTime_FullTime_Emp \n 4: PartTime FullTime Emp Using SwitchCase " +
+                    "\n 5: Calculate_Wage_ForMonth \n 6: Calculate Wage Using Condition");
                 Console.WriteLine("Enter the choice");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -34,6 +35,9 @@ namespace Day1_EmpWage
                         break; 
                     case 5:
                         emp.Calculate_Wage_ForMonth();
+                        break; 
+                    case 6:
+                        emp.CalWageUsingCondition();
                         break;
                     default:
                         Console.WriteLine("Please insert valid number");
