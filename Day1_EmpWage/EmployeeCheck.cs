@@ -111,5 +111,48 @@ namespace Day1_EmpWage
             int empWage = empHrs * WAGE_PER_HR;
             Console.WriteLine("EmpWage Is : " + empWage);
         }
+        public void Calculate_Wage_ForMonth()
+        {
+            const int IS_FULL_TIME = 1;
+            const int IS_PART_TIME = 2;
+            const int FULL_TIME_HR = 8;
+            const int PART_TIME_HR = 4;
+            const int WAGE_PER_HR = 20;
+            const int DAY_OF_MONTH = 10;
+            int TotalWage = 0;
+
+            int empHrs = 0;
+            Random random = new Random();
+            
+                for (int i = 1; i <= DAY_OF_MONTH; i++)
+            { 
+                    int empCheck = random.Next(0, 3);
+
+                switch (empCheck)
+                {
+                    case IS_FULL_TIME:
+                        {
+                            Console.WriteLine("Full Time Employee");
+                            empHrs = FULL_TIME_HR;
+                            break;
+                        }
+                    case IS_PART_TIME:
+                        {
+                            Console.WriteLine("Part Time Employee");
+                            empHrs = PART_TIME_HR;
+                            break;
+                        }
+                    default:
+                        Console.WriteLine("Employee is absent");
+                        empHrs = 0;
+                        break;
+                }               
+                int empWage = empHrs * WAGE_PER_HR;
+                Console.WriteLine("EmpWage is Day {0} is : {1} : ", i, empWage);
+                TotalWage += empWage;
+            }
+            Console.WriteLine("Total Emp Wage  is : "+ TotalWage);
+
+        }
     }
 }
