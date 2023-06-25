@@ -16,7 +16,7 @@ namespace Day1_EmpWage
             do
             {
                 Console.WriteLine(" 1:Check Emp Avalability \n 2: Check Daily Wage \n 3: PartTime_FullTime_Emp \n 4: PartTime FullTime Emp Using SwitchCase " +
-                    "\n 5: Calculate_Wage_ForMonth \n 6: Calculate Wage Using Condition");
+                    "\n 5: Calculate_Wage_ForMonth \n 6: Calculate Wage Using Condition \n 7: Cal Wage Using Constructor");
                 Console.WriteLine("Enter the choice");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -38,6 +38,10 @@ namespace Day1_EmpWage
                         break; 
                     case 6:
                         emp.CalWageUsingCondition();
+                        break; 
+                    case 7:
+                        CalWageUsingConstructor calWage = new CalWageUsingConstructor(20, 100);
+                        calWage.CalWage_Of_Employee();
                         break;
                     default:
                         Console.WriteLine("Please insert valid number");

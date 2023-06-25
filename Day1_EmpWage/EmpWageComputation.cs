@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Day1_EmpWage
 {
-    internal class EmployeeCheck
+    public class EmpWageComputation
     {
         public void CheckEmp()
         {
