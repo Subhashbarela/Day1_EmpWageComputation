@@ -13,13 +13,16 @@ namespace Day1_EmpWage
         {
             EmployeeCheck emp = new EmployeeCheck();
 
-            Console.WriteLine("1:Check Emp Avalability");
+            Console.WriteLine("1:Check Emp Avalability \n2: Check Daily Wage");
             Console.WriteLine("Enter the choice");
             int choice=int.Parse(Console.ReadLine());
             switch(choice)
             {
                 case 1:
                     emp.CheckEmp();
+                    break;
+                case 2 :
+                    emp.DailyWage();
                     break;
                 default:
                     Console.WriteLine("Please insert valid number");
